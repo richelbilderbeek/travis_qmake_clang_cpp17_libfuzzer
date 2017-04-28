@@ -5,7 +5,8 @@
 void cout(const std::string& s) noexcept
 {
   //libFuzzer should detect this
-  if (s == "SOS")
+  //This word is short, so the build log on Travis CI is kept short
+  if (s == "X")
   {
     throw;
   }
