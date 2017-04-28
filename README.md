@@ -24,7 +24,6 @@ Equally complex builds:
 
  * [none]
 
-
 Less complex builds:
 
  * No `libFuzzer`: [travis_qmake_clang_cpp14](https://www.github.com/richelbilderbeek/travis_qmake_clang_cpp14)

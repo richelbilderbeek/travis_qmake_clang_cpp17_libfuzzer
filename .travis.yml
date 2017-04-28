@@ -26,5 +26,7 @@ script:
   - ./travis_qmake_clang_cpp17_libfuzzer
   # libFuzzer
   - ./clang++ -fsanitize=address -fsanitize-coverage=trace-pc-guard test_fuzzer.cc libFuzzer.a
-  - ./a.out
+  # Error must be detected
+  - must_be_error=`./a.out`
+  - if [ ! $must_be_error -eq 77 ]; then exit 1; fi
   - cat crash-*
