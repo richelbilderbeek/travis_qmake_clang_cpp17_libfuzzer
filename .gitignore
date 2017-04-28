@@ -35,3 +35,4 @@ TMP_CLANG/
 third_party/
 clang
 clang++
+crash-*

@@ -1,9 +1,9 @@
-# travis_qmake_clang_cpp14_libfuzzer
+# travis_qmake_clang_cpp17_libfuzzer
 
 Branch|[![Travis CI logo](TravisCI.png)](https://travis-ci.org)
 ---|---
-master|[![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp14_libfuzzer.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp14_libfuzzer)
-develop|[![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp14_libfuzzer.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp14_libfuzzer)
+master|[![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp17_libfuzzer.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp17_libfuzzer)
+develop|[![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp17_libfuzzer.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp17_libfuzzer)
 
 This GitHub is part of [the Travis C++ Tutorial](https://github.com/richelbilderbeek/travis_cpp_tutorial).
 
@@ -26,7 +26,7 @@ Equally complex builds:
 
 Less complex builds:
 
- * No `libFuzzer`: [travis_qmake_clang_cpp14](https://www.github.com/richelbilderbeek/travis_qmake_clang_cpp14)
+ * No `libFuzzer`: [travis_qmake_clang_cpp17](https://www.github.com/richelbilderbeek/travis_qmake_clang_cpp17)
 
 ## Troubleshooting
 
@@ -38,3 +38,11 @@ As of 2017-04-27, the version that can be install from packages is `clang` 3.8.
 
 See [travis_qmake_clang_cpp17_libfuzzer](https://www.github.com/richelbilderbeek/travis_qmake_clang_cpp17_libfuzzer) 
 how to install clang's most recent version.
+
+## Most recent package or trunk?
+
+The trunk is the most recent (and thus unstable) `clang` version. It is used in this example: [travis_qmake_clang_cpp17](https://www.github.com/richelbilderbeek/travis_qmake_clang_cpp17)
+
+The most recent `clang` package available is used in this example: [travis_qmake_clang_cpp14](https://www.github.com/richelbilderbeek/travis_qmake_clang_cpp14)
+
+For `libFuzzer`, as of 2017-04-28, only the trunk has a version high enough.
