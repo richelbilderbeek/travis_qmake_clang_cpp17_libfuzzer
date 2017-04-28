@@ -5,14 +5,7 @@ sudo: required
 install: 
   - clang++ -v
   # clang, trunk, from http://llvm.org/docs/LibFuzzer.html#id14
-  - mkdir TMP_CLANG
-  - cd TMP_CLANG
-  - git clone https://chromium.googlesource.com/chromium/src/tools/clang
-  - cd ..
-  - TMP_CLANG/clang/scripts/update.py
-  # Links to clang, trunk
-  - ln -s ./third_party/llvm-build/Release+Asserts/bin/clang
-  - ln -s ./third_party/llvm-build/Release+Asserts/bin/clang++
+  - ./setup_clang_trunk
   # STL
   - sudo apt-get install -y libc++-dev libc++abi-dev
   # libFuzzer
@@ -26,7 +19,6 @@ script:
   - ./travis_qmake_clang_cpp17_libfuzzer
   # libFuzzer
   - ./clang++ -fsanitize=address -fsanitize-coverage=trace-pc-guard test_fuzzer.cc libFuzzer.a
-  # Error must be detected
-  - must_be_error=`./a.out`
-  - if [ ! $must_be_error -eq 77 ]; then exit 1; fi
+  # Must be error
+  - ./a.out
   - cat crash-*

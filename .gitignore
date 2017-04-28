@@ -30,3 +30,8 @@
 Fuzzer/
 *.o-*
 crash-7a8dc3985d2a90fb6e62e94910fc11d31949c348
+TMP_CLANG/
+*.pro.user
+third_party/
+clang
+clang++
