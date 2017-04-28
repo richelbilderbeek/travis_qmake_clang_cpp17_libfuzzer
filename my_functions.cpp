@@ -5,7 +5,7 @@
 void cout(const std::string& s) noexcept
 {
   //libFuzzer should detect this
-  if (s == "richel")
+  if (s == "SOS")
   {
     throw;
   }
