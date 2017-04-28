@@ -18,7 +18,7 @@ script:
   - make
   - ./travis_qmake_clang_cpp17_libfuzzer
   # libFuzzer
-  - ./clang++ -fsanitize=address -fsanitize-coverage=trace-pc-guard test_fuzzer.cc libFuzzer.a
+  - ./clang++ -std=c++1z -fsanitize=address -fsanitize-coverage=trace-pc-guard test_fuzzer.cc my_functions.cpp libFuzzer.a
   # Must be error
   - ./a.out
   - cat crash-*
