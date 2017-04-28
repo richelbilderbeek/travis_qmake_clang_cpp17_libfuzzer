@@ -19,6 +19,7 @@ script:
   - ./travis_qmake_clang_cpp17_libfuzzer
   # libFuzzer
   - ./clang++ -std=c++1z -fsanitize=address -fsanitize-coverage=trace-pc-guard test_fuzzer.cc my_functions.cpp libFuzzer.a
-  # Must be error
-  - ./a.out
+  # Will be an error, that must be ignored
+  - ./a.out || true
+  # If no crash log, Travis will give an error
   - cat crash-*
